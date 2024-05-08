@@ -95,4 +95,12 @@ contract SpendingLimitHookTest is RhinestoneModuleKit, Test {
         // Execute transfer in new period
         testExec();
     }
+
+    function testExec_CalculateGas() public {
+        // Calculate gas
+        instance.log4337Gas("spendingLimitHook");
+
+        // Execute transfer
+        testExec();
+    }
 }
